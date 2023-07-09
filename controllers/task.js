@@ -15,8 +15,8 @@ export const newTask = async (req, res, next) => {
 
 export const getMyTasks = async (req, res, next) => {
   const myId = req.user.id;
-  console.log(req.user);
-  console.log(myId, req.user.id);
+  // console.log(req.user);
+  // console.log(myId, req.user.id);
   const tasks = await Task.find({ user: myId });
   res.status(200).json({
     success: true,
